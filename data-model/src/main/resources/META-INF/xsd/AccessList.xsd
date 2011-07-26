@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema elementFormDefault="qualified"
-            targetNamespace="http://docs.openstack.org/loadbalancers/api/v1.0"
-            xmlns:tns="http://docs.openstack.org/loadbalancers/api/v1.0"
+            targetNamespace="http://docs.openstack.org/loadbalancers/api/accesslist/v1.0"
+            xmlns:tns="http://docs.openstack.org/loadbalancers/api/accesslist/v1.0"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
             jaxb:version="2.1"
             xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
-            jaxb:extensionBindingPrefixes="xjc">
+            jaxb:extensionBindingPrefixes="xjc" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb">
 
     <xsd:import schemaLocation="global.xsd" namespace="http://docs.openstack.org/loadbalancers/api/global/v1.0"/>
 
@@ -21,8 +20,7 @@
     <xsd:complexType name="networkItem1">
         <xsd:attribute name="id" type="xsd:int"/>
         <xsd:attribute name="address" type="xsd:string"/>
-        <xsd:attribute name="ipVersion" type="tns:ipVersion1"/>
-        <xsd:attribute name="type" type="tns:networkItemType1"/>
+        <xsd:attribute name="type1" type="tns:networkItemType1"/>
     </xsd:complexType>
 
     <xsd:simpleType name="networkItemType1">
@@ -32,18 +30,4 @@
         </xsd:restriction>
     </xsd:simpleType>
 
-    <xsd:simpleType name="ipVersion1">
-        <xsd:annotation>
-            <xsd:appinfo>
-                <jaxb:typesafeEnumClass>
-                    <jaxb:typesafeEnumMember value="IPV4" name="IPV4"/>
-                    <jaxb:typesafeEnumMember value="IPV6" name="IPV6"/>
-                </jaxb:typesafeEnumClass>
-            </xsd:appinfo>
-        </xsd:annotation>
-        <xsd:restriction base="xsd:string">
-            <xsd:enumeration value="IPV4"/>
-            <xsd:enumeration value="IPV6"/>
-        </xsd:restriction>
-    </xsd:simpleType>
 </xsd:schema>
