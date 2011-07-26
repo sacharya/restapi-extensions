@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="atlas-public-web:war">
+    <output-path>$PROJECT_DIR$/api/public-web/target</output-path>
+    <root id="archive" name="public-web-1.1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="atlas-public-web:war exploded" />
+    </root>
+  </artifact>
+</component>
