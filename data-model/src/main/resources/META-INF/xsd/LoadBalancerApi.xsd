@@ -34,7 +34,7 @@
             <xsd:element name="updated" type="tns:updated" minOccurs="0"/>
             <xsd:element name="connectionLogging" type="tns:connectionLogging" minOccurs="0"/>
             <xsd:element name="sourceAddresses" type="tns:sourceAddresses" minOccurs="0"/>
-            <xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
         </xsd:sequence>
         <xsd:attribute name="id" type="xsd:int"/>
         <xsd:attribute name="name" type="xsd:string"/>
@@ -43,7 +43,7 @@
         <xsd:attribute name="port" type="xsd:int"/>
         <xsd:attribute name="status" type="xsd:string"/>
         <xsd:attribute name="isSticky" type="xsd:boolean"/>
-        <xsd:anyAttribute processContents="lax" namespace="##other" />
+        <!--<xsd:anyAttribute processContents="lax" namespace="##other" />-->
     </xsd:complexType>
 
     <xsd:element name="sourceAddresses" type="tns:sourceAddresses"/>
