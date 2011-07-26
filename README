@@ -8,4 +8,4 @@ Getting Started
   mvn clean install
      - creates public-web/1.1.0-SNAPSHOT/public-web-1.1.0-SNAPSHOT.war
 
-  Deploy the lb-public-rest-service-x.y.z-SNAPSHOT.war to Glassfish.
+  Deploy the public-web-1.1.0-SNAPSHOT.war to Glassfish.

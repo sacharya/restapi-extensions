@@ -11,6 +11,7 @@
 classes/
 */target/*
 */*/target
+.idea
 
 ## generic files to ignore
 *~
