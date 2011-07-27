@@ -11,7 +11,9 @@ import javax.ws.rs.core.Response;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
+import javax.xml.namespace.QName;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -28,7 +30,7 @@ public class LoadBalancersResource {
     public Response createLoadBalancer(LoadBalancer loadBalancer) {
         logger.log(Level.INFO, "loadbalancer: " + loadBalancer);
 
-        AccessList1 accessList1 = (AccessList1) getAny(loadBalancer);
+        AccessList1 accessList1 = (AccessList1) getAnyElement(loadBalancer);
         if(accessList1 == null) {
             logger.log(Level.INFO, "No accesslist found");
         } else {
@@ -36,11 +38,11 @@ public class LoadBalancersResource {
                 logger.log(Level.INFO, "Network Item1: " + networkItem1.getAddress() + " : " + networkItem1.getType1());
             }
         }
-
+        //loadBalancer.getOtherAttributes().put(new QName("http://docs.openstack.org/test", "gender"), "male");
         return Response.status(Response.Status.OK).entity(loadBalancer).build();
     }
 
-    private Object getAny(LoadBalancer loadBalancer) {
+    private Object getAnyElement(LoadBalancer loadBalancer) {
         List<Object> anies = loadBalancer.getAnies();
         for (Object any : anies) {
             logger.log(Level.INFO, "Class: " + any.getClass());

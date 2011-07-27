@@ -6,7 +6,6 @@
             xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
             jaxb:version="2.1"
             xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
-            xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
             jaxb:extensionBindingPrefixes="xjc">
 
     <xsd:import schemaLocation="global.xsd" namespace="http://docs.openstack.org/loadbalancers/api/global/v1.0"/>
@@ -43,7 +42,7 @@
         <xsd:attribute name="port" type="xsd:int"/>
         <xsd:attribute name="status" type="xsd:string"/>
         <xsd:attribute name="isSticky" type="xsd:boolean"/>
-        <!--<xsd:anyAttribute processContents="lax" namespace="##other" />-->
+        <xsd:anyAttribute namespace="##other" processContents="strict"/>
     </xsd:complexType>
 
     <xsd:element name="sourceAddresses" type="tns:sourceAddresses"/>

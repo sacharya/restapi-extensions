@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema elementFormDefault="qualified"
-            targetNamespace="http://docs.openstack.org/loadbalancers/api/accesslist/v1.0"
-            xmlns:tns="http://docs.openstack.org/loadbalancers/api/accesslist/v1.0"
+            targetNamespace="http://docs.openstack.org/test"
+            xmlns:tns="http://docs.openstack.org/test"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             jaxb:version="2.1"
             xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
@@ -29,5 +29,14 @@
             <xsd:enumeration value="DENY"/>
         </xsd:restriction>
     </xsd:simpleType>
+
+    <xsd:attribute name="gender">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:pattern value="male|female"/>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:attribute>
+
 
 </xsd:schema>

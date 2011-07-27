@@ -1,0 +1,18 @@
+<loadBalancer xmlns="http://docs.openstack.org/loadbalancers/api/v1.0" xmlns:rx="http://docs.openstack.org/test" xmlns:gn="http://docs.openstack.org/testp"
+    name="a-new-loadbalancer"
+    port="1000"
+    protocol="HTTP"i
+    gn:gender="male">
+    <virtualIps>
+        <virtualIp type="PUBLIC"/>
+    </virtualIps>
+    <nodes>
+        <node address="10.1.1.1" port="80" condition="ENABLED"/>
+    </nodes>
+<rx:accessList1>
+    <rx:networkItem1
+        id="100"
+        address="206.160.165.40"
+        type1="ALLOW" />
+</rx:accessList1>
+</loadBalancer>
