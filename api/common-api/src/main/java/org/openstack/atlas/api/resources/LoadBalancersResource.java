@@ -1,8 +1,6 @@
 package org.openstack.atlas.api.resources;
 
-import org.openstack.atlas.docs.loadbalancers.api.v1.AccessList;
 import org.openstack.atlas.docs.loadbalancers.api.v1.LoadBalancer;
-import org.openstack.atlas.docs.loadbalancers.api.v1.NetworkItem;
 import org.openstack.atlas.docs.loadbalancers.api.v1.accesslist.AccessList1;
 import org.openstack.atlas.docs.loadbalancers.api.v1.accesslist.NetworkItem1;
 import org.w3c.dom.Element;
@@ -13,8 +11,6 @@ import javax.ws.rs.core.Response;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
-import javax.xml.validation.SchemaFactory;
-import java.io.Serializable;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -33,6 +29,13 @@ public class LoadBalancersResource {
         logger.log(Level.INFO, "loadbalancer: " + loadBalancer);
 
         AccessList1 accessList1 = (AccessList1) getAny(loadBalancer);
+        if(accessList1 == null) {
+            logger.log(Level.INFO, "No accesslist found");
+        } else {
+            for(NetworkItem1 networkItem1 : accessList1.getNetworkItem1s()) {
+                logger.log(Level.INFO, "Network Item1: " + networkItem1.getAddress() + " : " + networkItem1.getType1());
+            }
+        }
 
         return Response.status(Response.Status.OK).entity(loadBalancer).build();
     }
