@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd">
+
+    <import resource="classpath:rax-spring-context-public.xml"/>
+
+    <jaxrs:server id="loadBalancingPublic" address="/" staticSubresourceResolution="true">
+        <jaxrs:serviceFactories>
+            <ref bean="loadBalancingPublicImplFactory"/>
+        </jaxrs:serviceFactories>
+        <jaxrs:extensionMappings>
+            <entry key="xml" value="application/xml"/>
+            <entry key="json" value="application/json"/>
+        </jaxrs:extensionMappings>
+        <jaxrs:schemaLocations>
+            <jaxrs:schemaLocation>classpath:/META-INF/xsd/LoadBalancerApi.xsd</jaxrs:schemaLocation>
+            <jaxrs:schemaLocation>classpath:/META-INF/xsd/LoadBalancerApiFaults.xsd</jaxrs:schemaLocation>
+            <jaxrs:schemaLocation>classpath:/META-INF/xsd/AccessList.xsd</jaxrs:schemaLocation>
+        </jaxrs:schemaLocations>
+    </jaxrs:server>
+
+    <bean id="loadBalancingPublicImplFactory" class="org.apache.cxf.jaxrs.spring.SpringResourceFactory">
+        <property name="beanId" value="loadBalancingPublicImpl"/>
+    </bean>
+</beans>

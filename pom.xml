@@ -10,10 +10,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>core-data-model</module>
-        <module>core-api</module>
-        <module>rax-data-model</module>
-        <module>rax-api</module>
+        <module>core</module>
+        <module>rax</module>
     </modules>
 
     <build>
