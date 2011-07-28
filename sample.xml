@@ -1,4 +1,4 @@
-<loadBalancer xmlns="http://docs.openstack.org/loadbalancers/api/v1.0" xmlns:rx="http://docs.openstack.org/extensions/rax/api/v1.0"
+<loadBalancer xmlns="http://docs.openstack.org/loadbalancers/api/v1.0" xmlns:rx="http://docs.rackspace.com/extensions/rax/api/v1.0"
               name="a-new-loadbalancer"
               port="1000"
               protocol="HTTP"

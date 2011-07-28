@@ -12,6 +12,8 @@
     <modules>
         <module>core-data-model</module>
         <module>core-api</module>
+        <module>rax-data-model</module>
+        <module>rax-api</module>
     </modules>
 
     <build>
