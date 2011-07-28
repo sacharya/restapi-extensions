@@ -22,6 +22,7 @@ public class LoadBalancersResource {
         logger.log(Level.INFO, "loadbalancer: " + loadBalancer);
 
         loadBalancer.getAnies().clear();
+        loadBalancer.getOtherAttributes().clear();
         return Response.status(Response.Status.OK).entity(loadBalancer).build();
     }
 
