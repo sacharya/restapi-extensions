@@ -10,12 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <name>RestAPi Extensions :: API</name>
-    <artifactId>api</artifactId>
+    <artifactId>core-api</artifactId>
 
     <packaging>pom</packaging>
 
     <modules>
-        <module>common-api</module>
-        <module>public-web</module>
+        <module>core-common-api</module>
+        <module>core-public-web</module>
     </modules>
 </project>

@@ -10,7 +10,7 @@
     </parent>
 
     <name>RestAPi Extensions :: Data Model</name>
-    <artifactId>data-model</artifactId>
+    <artifactId>core-data-model</artifactId>
 
     <packaging>jar</packaging>
 

@@ -10,14 +10,14 @@
     </parent>
 
     <name>RestApi Extensions :: Common</name>
-    <artifactId>common-api</artifactId>
+    <artifactId>core-common-api</artifactId>
 
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>data-model</artifactId>
+            <artifactId>core-data-model</artifactId>
             <version>${project.version}</version>
         </dependency>
 
