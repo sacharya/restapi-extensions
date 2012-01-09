@@ -27,7 +27,6 @@
             <xsd:element name="sessionPersistence" type="tns:sessionPersistence" minOccurs="0"/>
             <xsd:element name="healthMonitor" type="tns:healthMonitor" minOccurs="0"/>
             <xsd:element name="connectionThrottle" type="tns:connectionThrottle" minOccurs="0"/>
-            <xsd:element name="accessList" type="tns:accessList" minOccurs="0"/>
             <xsd:element name="cluster" type="tns:cluster" minOccurs="0"/>
             <xsd:element name="created" type="tns:created" minOccurs="0"/>
             <xsd:element name="updated" type="tns:updated" minOccurs="0"/>

@@ -7,6 +7,7 @@ import org.openstack.atlas.docs.loadbalancers.api.v1.LoadBalancer;
 
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.Response;
+
 import org.w3c.dom.Element;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
@@ -23,6 +24,13 @@ public class LoadBalancersResource extends org.openstack.atlas.api.resources.Loa
 
     private Integer accountId;
     private HttpHeaders requestHeaders;
+
+   /* @Override
+    public Response createLoadBalancer(LoadBalancer loadBalancer) {
+        //org.openstack.atlas.docs.loadbalancers.api.v1.rax.LoadBalancer raxLoadBalancer = (org.openstack.atlas.docs.loadbalancers.api.v1.rax.LoadBalancer) loadBalancer;
+        //AccessList1 accesslist1 = (AccessList1) raxLoadBalancer.getAccessList1();
+        return Response.status(Response.Status.OK).entity(loadBalancer).build();
+    }*/
 
     @Override
     public Response createLoadBalancer(LoadBalancer loadBalancer) {

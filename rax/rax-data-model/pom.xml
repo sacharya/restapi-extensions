@@ -81,6 +81,24 @@
                             <goal>xjc</goal>
                         </goals>
                     </execution>
+                   <!-- <execution>
+                        <id>generate-rax-accesslist-api-sources</id>
+                        <configuration>
+                            <staleFile>target/lbra.staleFile</staleFile>
+                            <extension>true</extension>
+                            <schemaDirectory>
+                                ${basedir}/src/main/resources/META-INF/xsd
+                            </schemaDirectory>
+                            <clearOutputDir>false</clearOutputDir>
+                            <schemaFiles>raxlb.xsd</schemaFiles>
+                            <packageName>org.openstack.atlas.docs.loadbalancers.api.v1</packageName>
+                            &lt;!&ndash;<arguments>-Xcollection-setter-injector</arguments>&ndash;&gt;
+                            <arguments>-Xxew -setters</arguments>
+                        </configuration>
+                        <goals>
+                            <goal>xjc</goal>
+                        </goals>
+                    </execution>-->
                 </executions>
             </plugin>
         </plugins>

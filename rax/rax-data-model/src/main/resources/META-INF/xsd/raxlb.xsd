@@ -1,0 +1,29 @@
+<!--
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified"
+            targetNamespace="http://docs.openstack.org/loadbalancers/api/v1.0"
+            xmlns:tns="http://docs.openstack.org/loadbalancers/api/v1.0"
+            xmlns:rax="http://docs.rackspace.com/extensions/rax/api/v1.0"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            jaxb:version="2.1"
+            xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+            xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+            jaxb:extensionBindingPrefixes="xjc" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb">
+
+    &lt;!&ndash;<xsd:import schemaLocation="global.xsd" namespace="http://docs.openstack.org/loadbalancers/api/global/v1.0"/>&ndash;&gt;
+    <xsd:import namespace="http://docs.rackspace.com/extensions/rax/api/v1.0" schemaLocation="AccessList.xsd"/>
+
+    <xsd:include vc:minVersion="1.0" vc:maxVersion="1.1" schemaLocation="../../../../../../../core/core-data-model/src/main/resources/META-INF/xsd/LoadBalancerApi.xsd"/>
+    &lt;!&ndash;<xsd:redefine vc:maxVersion="1.1" schemaLocation="../../../../../../../core/core-data-model/src/main/resources/META-INF/xsd/LoadBalancerApi.xsd">
+        <xsd:complexType name="loadBalancer">
+            <xsd:complexContent>
+                <xsd:extension base="tns:loadBalancer">
+                    <xsd:sequence>
+                        <xsd:element name="accessList1" nillable="true" />
+                    </xsd:sequence>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:redefine>&ndash;&gt;
+</xsd:schema>
+-->
